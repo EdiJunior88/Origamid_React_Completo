@@ -20,6 +20,8 @@
   <li>0103 JavaScript 3</li>
 </ul>
 
+<hr>
+
 <h3>02 React Para Iniciantes</h3>
 <ul>
   <li>0201 Adicionar React</li>
@@ -38,6 +40,8 @@
   <li>0212 Desafio Componentes</li>
 </ul>
 
+<hr>
+
 <h3>03 React Hooks</h3>
 <ul>
   <li>0301 useState 1</li>
@@ -53,6 +57,8 @@
   <li>0306 Custom Hooks 2</li>
   <li>0307 Regras</li>
 </ul>
+
+<hr>
 
 <h3>04 Formulários</h3>
 <ul>
@@ -72,6 +78,8 @@
   <li>0412 Desafio Formulários</li>
 </ul>
 
+<hr>
+
 <h3>05 CSS</h3>
 <ul>
   <li>0501 CSS Import</li>
@@ -82,6 +90,8 @@
   <li>0505 Animações 2</li>
   <li>0506 Imagens</li>
 </ul>
+
+<hr>
 
 <h3>06 React Router</h3>
 <ul>
@@ -95,6 +105,8 @@
   <li>0606 Desafio Router 3</li>
 </ul>
 
+<hr>
+
 <h3>07 Mais React</h3>
 <ul>
   <li>0701 PropTypes</li>
@@ -103,6 +115,8 @@
   <li>0704 useReducer</li>
   <li>0705 Classes</li>
 </ul>
+
+<hr>
 
 <h3>08 Projeto Final</h3>
 <ul>
