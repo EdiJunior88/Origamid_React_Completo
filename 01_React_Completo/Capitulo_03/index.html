@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>JavaScript 1</title>
+</head>
+<body>
+  <h1>JavaScript 1</h1>
+
+  <h3>Tudo é Objeto</h3>
+
+  <p>Um objeto possui propriedades e métodos que podem ser diretos ou herdados (protótipo).</p>
+
+  <pre>
+    // Objeto Literal
+    const menu = {
+      selector: '.principal',
+      active() {
+        const menuElement = document.querySelector(this.selector);
+        menuElement.classList.add('active');
+      },
+    };
+
+    menu.selector; // ".principal";
+    menu.active(); // adicionar active ao menu
+    menu.hasOwnProperty('class'); // método herdado
+  </pre>
+
+  <pre>
+    ['10', '20', '30'].map(Number); // [10, 20, 30];
+    'JavaScript'.toUpperCase(); // JAVASCRIPT
+
+    const body = document.querySelector('body');
+    body.classList.add('js'); // adiciona JS ao Body
+  </pre>
+
+  <p><mark>Todo objeto possui um protótipo, menos o null e o undefined (este não é um objeto).</mark></p>
+
+  <h3>Arrow Function</h3>
+
+  <p>A principal diferença é o contexto do this. A arrow function não cria o próprio this.</p>
+
+  <pre>
+    const upperName = function (name) {
+      return name.toUpperCase();
+    };
+    upperName('André'); // ANDRÉ
+    
+    const lowerName = (name) => {
+      return name.toLowerCase();
+    };
+    lowerName('Rafael'); // rafael
+    
+    const countLetters = (word) => word.length;
+    countLetters('Rafael'); // 6    
+  </pre>
+
+  <h3>Destructuring</h3>
+
+  <p>É possui desestruturar objetos e arrays.</p>
+
+  <pre>
+    function handleMouseMove(event) {
+      const clientX = event.clientX;
+      const clientY = event.clientY;
+      console.log(clientX, clientY);
+    }
+    
+    // Irá definir uma constante para cada propriedade
+    // dentro de event, que tiver o mesmo nome que a constante.
+    function handleMouseMove(event) {
+      const { clientX, clientY } = event;
+      console.log(clientX, clientY);
+    }
+    
+    // Podemos desestruturar o parâmetro
+    function handleMouseMove({ clientX, clientY }) {
+      console.log(clientX, clientY);
+    }
+    
+    document.documentElement.addEventListener('mousemove', handleMouseMove);    
+  </pre>
+
+  <h3>Arrays</h3>
+
+  <pre>
+    const frutas = ['Banana', 'Uva'];
+    const [fruta1, fruta2] = frutas;
+    // fruta1 = banana
+    // fruta2 = Uva
+  </pre>
+
+  <pre>
+    const useQuadrado = [
+      4,
+      function (lado) {
+        return 4 * lado;
+      },
+    ];
+    const [lados, area] = useQuadrado;
+  </pre>
+
+  <h3>Rest e Spread</h3>
+
+  <p>Rest</p>
+
+  <pre>
+    function showList(empresa, ...clients) {
+      clients.forEach((client) => {
+        console.log(client, empresa);
+      });
+    }
+    
+    showList('Google', 'André', 'Pedro', 'João');    
+  </pre>
+
+  <p>Spread</p>
+
+  <pre>
+    // Arrays
+    const numeros = [1, 4, 9, 2, 3, 6, 20];
+    Math.max(...numeros); // retorna 20
+
+    // Transformar ArrayLike and Array
+    const items = document.querySelectorAll('li');
+
+    // items.map() não existe, agora [...items]
+    // é uma nova array, com cada elemento de items.
+    [...items].map((item) => (item.innerText = 'Teste'));
+
+    // Objetos
+    const carro = {
+      cor: 'azul',
+      portas: 4,
+      ano: 2020,
+    };
+
+    const cloneCarro = { ...carro };
+    const carroEsportivo = { turbo: true, ...carro };
+  </pre>
+
+  <h3>Module</h3>
+
+  <p>Os módulos servem para quebrarmos o código em diferente arquivos, para facilitar a organização e compartilhamento de código comum.</p>
+
+  <pre>
+    &lt!-- Só funciona em servidor, seja local ou online
+    Não irá funcionar se você abrir o html direto --&gt
+    &ltscript type="module" src="./script.js"&gt&lt/script&gt
+  </pre>
+
+  <pre>
+    // quadrado.js
+    export function areaQuadrado(l) {
+      return l * l;
+    }
+
+    export function perimetroQuadrado(l) {
+      return 4 * l;
+    }
+  </pre>
+
+  <pre>
+    // numeroAleatorio.js
+    export default function numeroAleatorio() {
+      return Math.random();
+    }
+  </pre>
+
+  <pre>
+    // script.js
+    import { areaQuadrado, perimetroQuadrado } from './quadrado.js';
+
+    areaQuadrado(4);
+    perimetroQuadrado(5);
+    numeroAleatorio();
+  </pre>
+
+  <h3>Fetch</h3>
+
+  <p>Envia requisições assíncronas para o servidor. Serve para acessarmos/escrevermos dados em apis externas.</p>
+
+  <pre>
+    fetch('https://ranekapi.origamid.dev/wp-json/api/produto')
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+      });
+  </pre>
+
+  <h3>Async / Await</h3>
+
+  <p>Fetch retorna uma promisse. É possível criarmos funções assíncronas, que irão esperar a promisse resolver, antes de continuar com o código.</p>
+
+  <pre>
+    async function fetchProdutos(url) {
+      const response = await fetch(url);
+      const json = await response.json();
+      return json;
+    }
+    
+    fetchProdutos('https://ranekapi.origamid.dev/wp-json/api/produto');    
+  </pre>
+
+  <h3>Arrays (Map e Filter)</h3>
+
+  <p>Métodos para iterarmos entre os valores de arrays.</p>
+
+  <pre>
+    const precos = [
+      'Crédito',
+      'R$ 200',
+      'R$ 400',
+      'Contas Pagar',
+      'R$ 300',
+      'R$ 400',
+      'Meus dados',
+    ];
+
+    // Retorna uma array nova, que contem os items em
+    // que o retorno da função for verdadeiro
+    const precosFiltro = precos.filter((preco) => preco.includes('R$'));
+
+    // Retorna uma nova array, modificada com o
+    // retorno de cada item da função
+    const precoNumeros = precosFiltro.map((preco) =>
+      Number(preco.replace('R$ ', '')),
+    );
+  </pre>
+
+  <h3>Expressões</h3>
+
+  <pre>
+    const grupoA = 100;
+    const grupoB = 300;
+    const vencedor = grupoA > grupoB ? 'Grupo A Venceu' : 'Grupo B Venceu';
+
+    const numeros = [2, 3, 4, 5, 6];
+    const total = numeros.filter((numero) => numero > 4);
+
+    const active = true;
+    const button = active && 'Botão está ativo';
+  </pre>
+
+  <p>JSX</p>
+
+  <pre>
+    // JSX
+    &ltbutton onClick={(event) =&gt event.target.classList.add('active')}&gt
+      Button
+    &lt/button&gt
+  </pre>
+</body>
+</html>
