@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Nota: ao fazer o deploy, substitua "development.js" por "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <title>0203 React e JavaScript</title>
+</head>
+<body>
+  <div id="app-javascript">
+    <p>Total:  <span id="total"></span></p>
+    <p>Preço: R$<span id="preco"></span></p>
+    <button id="button">Comprar</button>
+
+  </div>
+  <script type="application/javascript">
+    const total = document.getElementById("total");
+    const preco = document.getElementById("preco");
+    const button = document.getElementById("button");
+
+    let contador = 1;
+
+    function atualizarValores(contatdor) {
+      total.innerText = contador;
+      preco.innerText = contador * 250;
+    }
+
+    atualizarValores(contador);
+
+    function handleClick() {
+      contador++;
+      atualizarValores(contador);
+    }
+
+    button.addEventListener("click", handleClick);
+  </script>
+
+
+  <div id="app-react"></div>
+
+  <script type="text/babel">
+     const Comprar = () => {
+      const [contador, setContador] = React.useState(1);
+
+      return <div>
+        <p>Total: {contador}</p>
+        <p>Preço: R${contador * 250}</p>
+        <button onClick={() => setContador(contador + 1)}>Comprar</button>
+      </div>
+    }
+
+    ReactDOM.render(
+      <Comprar />,
+      document.getElementById('app-react')
+    );
+  </script>
+</body>
+</html>
