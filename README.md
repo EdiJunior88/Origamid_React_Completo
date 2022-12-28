@@ -1,3 +1,4 @@
+<img src="./app/src/Imagens/origamid-logo.png" width="50%">
 <h1>ORIGAMID</h1>
 <h2>React JS Completo com Hooks</h2>
 
@@ -165,6 +166,16 @@
   <li>09 Considerações Finais</li>
   <li>0901 React Completo Conclusão</li>
 </ul>
+
+<hr>
+
+<h3>Tempo Estudando o curso</h3>
+
+<p>
+  <a href="https://wakatime.com/badge/github/EdiJunior88/Origamid_React_Completo">
+    <img src="https://wakatime.com/badge/github/EdiJunior88/Origamid_React_Completo.svg" alt="wakatime">
+  </a>
+</p>
 
 <hr>
 
