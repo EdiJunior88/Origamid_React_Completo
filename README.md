@@ -1,4 +1,4 @@
-<img src="app/src/Imagens/origamid-logo.png">
+<img src="app/src/Imagens/origamid-logo.png" width="50%">
 <h1>ORIGAMID</h1>
 <h2>React JS Completo com Hooks</h2>
 
