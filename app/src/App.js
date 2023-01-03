@@ -1,37 +1,26 @@
 import React from "react";
 
-const titulo = <h1>Esse é um título</h1>;
-
 const App = () => {
-  const random = Math.random();
-  const ativo = true;
-
-  function mostrarNome(sobrenome) {
-    return "André " + sobrenome;
-  }
-
-  const carro = {
-    marca: "Ford",
-    rodas: 4,
-  };
-
-  const estiloP = {
-    color: "blue",
-    fontSize: "2rem",
-  };
+  const livros = [
+    { nome: "A Game of Thrones", ano: 1996 },
+    { nome: "A Clash of Kings", ano: 1998 },
+    { nome: "A Storm of Swords", ano: 2000 },
+  ];
 
   return (
-    <>
-      {titulo}
-      <p>
-        {true ? "tetete" : "aaaaaa"} - {10}
-        {mostrarNome("Rafael")}
-      </p>
-      <p style={estiloP}>{new Date().getFullYear()}</p>
-      <p style={estiloP}>{carro.marca}</p>
-      <p>{carro.rodas}</p>
-      <p className={ativo ? "ativo" : "inativo"}>{(random * 1000) / 50}</p>
-    </>
+    <ul>
+      {livros
+        .filter(
+          ({ ano }) =>
+            (ano) >=
+              1998
+        )
+        .map(({ nome, ano }) => (
+          <li key={nome}>
+            {nome}, {ano}
+          </li>
+        ))}
+    </ul>
   );
 };
 
