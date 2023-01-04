@@ -3,20 +3,14 @@ import Button from "./Button";
 import Input from "./Input";
 
 const Form = () => {
-  return (
-    <form>
-      <p>
-        <label htmlFor='nome'>Nome</label>
-        <Input />
-      </p>
+  const arr = ["Item 1", "Item 2"];
 
-      <p>
-        <label htmlFor='email'>Email</label>
-        <Input />
-      </p>
-      
-      <Button />
-    </form>
+  return (
+    <>
+      <Input id='email' label='Email' required />
+      <Input id='password' type='password' label='Password' />
+      <Button items={arr} />
+    </>
   );
 };
 
