@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-const Produto = ({ dados }) => {
+const Produto = () => {
+  useEffect(() => {
+    function handleScroll(event) {
+      console.log(event);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, []);
+
   return (
-    <div>
-      <h1>{dados.nome}</h1>
-      <p>R$ {dados.preco}</p>
-      <img src={dados.fotos[0].src} alt={dados.fotos[0].titulo} />
+    <div style={{ height: "200vh" }}>
+      <p>Meu Produto</p>
     </div>
   );
 };
 
-export default Produto
+export default Produto;
