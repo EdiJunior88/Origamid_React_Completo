@@ -1,26 +1,38 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 
-const App = () => {
-  const [carrinho, setCarrinho] = useState(0);
-  const [notificacao, setNotificacao] = useState(null);
-  const timeoutRef = useRef();
+const set1 = new Set();
+const set2 = new Set();
 
-  function handleClick() {
-    setCarrinho(carrinho + 1);
-    setNotificacao("Item adicionado ao carrinho");
+const Produto = () => {
+  const func1 = () => {
+    console.log("Teste");
+  };
 
-    clearTimeout(timeoutRef.current);
-    
-    timeoutRef.current = setTimeout(() => {
-      setNotificacao(null);
-    }, 2000);
-    console.log(timeoutRef.current);
-  }
+  const func2 = useCallback(() => {
+    console.log("Teste");
+  }, []);
+
+  set1.add(func1)
+  set2.add(func2)
+
+  console.log("Set 1: ", set1);
+  console.log("Set 2: ", set2);
 
   return (
     <div>
-      <p>{notificacao}</p>
-      <button onClick={handleClick}>Adicionar Carrinho {carrinho}</button>
+      <p onClick={func1}>Produto 1</p>
+      <p onClick={func2}>Produto 2</p>
+    </div>
+  );
+};
+
+const App = () => {
+  const [contar, setContar] = useState(0);
+
+  return (
+    <div>
+      <Produto />
+      <button onClick={() => setContar(contar + 1)}>{contar}</button>
     </div>
   );
 };
