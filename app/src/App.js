@@ -1,51 +1,49 @@
-import React, { useEffect } from "react";
-import useFetch from "./useFetch";
-import useLocalStorage from "./useLocalStorage";
+import React, { useState } from "react";
 
 const App = () => {
-  const [produto, setProduto] = useLocalStorage("produto", "");
-  const { request, data, loading, error } = useFetch();
+  // const [nome, setNome] = useState("");
+  // const [email, setEmail] = useState("");
 
-  useEffect(() => {
-    async function fetchData() {
-      const {response, json} = await request(
-        "https://ranekapi.origamid.dev/json/api/produto"
-      );
-      console.log(response, json);
-    }
+  const [form, setForm] = useState({
+    nome: "",
+    email: "",
+  });
 
-    fetchData();
-  }, [request]);
-
-  function handleClick({ target }) {
-    setProduto(target.innerText);
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event);
   }
 
-  if (error) {
-    return <p>{error}</p>;
+  function handleChange({ target }) {
+    const { id, value } = target;
+    setForm({ ...form, [id]: value });
   }
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor='nome'>Nome</label>
+      <input
+        id='nome'
+        type='text'
+        name='nome'
+        value={form.nome}
+        onChange={handleChange}
+      />
+      {form.nome}
 
-  if (data) {
-    return (
-      <div>
-        <p>Produto preferido: {produto}</p>
-        <button onClick={handleClick}>notebook</button>
-        <button onClick={handleClick}>smartfone</button>
-
-        {data.map((produto) => (
-          <div key={produto.id}>
-            <h1>{produto.nome}</h1>
-          </div>
-        ))}
-      </div>
-    );
-  } else {
-    return null;
-  }
+      <label htmlFor='email'>Email</label>
+      <input
+        id='email'
+        type='email'
+        name='email'
+        value={form.email}
+        onChange={handleChange}
+      />
+      {form.email}
+      
+      <button>Enviar</button>
+    </form>
+  );
 };
 
 export default App;
