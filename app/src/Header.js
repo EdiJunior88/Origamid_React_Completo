@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import "./Header.css";
 // import {Link} from "react-router-dom"
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   let activeStyle = {
     color: "tomato",
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log("Mudou a rota");
+  }, [location]);
 
   return (
     <nav>
