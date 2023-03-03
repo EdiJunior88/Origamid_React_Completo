@@ -1,0 +1,30 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.header ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.header ul li {
+  margin-right: 1rem;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.header :global(.active),
+.link:hover {
+  background: #ddd;
+}
