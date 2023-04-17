@@ -1,4 +1,4 @@
-<img src="app/src/Imagens/origamid-logo.png" width="50%">
+<img src="img/origamid-logo.png" width="50%">
 <h2>React JS Completo com Hooks</h2>
 
 <p>Neste curso você irá aprender a como utilizar o React do zero para o desenvolvimento de aplicações web reativas.</p>
