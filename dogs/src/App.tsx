@@ -11,8 +11,8 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Cabecalho />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/login/*' element={<Login />} />
       </Routes>
       <Rodape />
     </BrowserRouter>
