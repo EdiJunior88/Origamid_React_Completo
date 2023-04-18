@@ -1,4 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  --tipo-primario: Helvetica, Arial, sans-serif;
+  --tipo-secundario: "Spectral", Georgia;
+  font-family: var(--tipo-primario);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
 input {
   display: block;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: var(--tipo-primario);
+  color: #333;
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }

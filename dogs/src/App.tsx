@@ -1,11 +1,21 @@
 import React from "react";
-import Api from "./api/Api";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cabecalho from "./Componentes/Cabecalho";
+import Rodape from "./Componentes/Rodape";
+import Home from "./Componentes/Home";
+import Login from "./Componentes/Login/Login";
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div>
-      <Api />
-    </div>
+    <BrowserRouter>
+      <Cabecalho />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      <Rodape />
+    </BrowserRouter>
   );
 };
 
