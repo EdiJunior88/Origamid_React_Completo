@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styles from './Rodape.module.scss'
 
-const Rodape = () => {
+const Rodape: FC = () => {
   return (
     <div>Rodape</div>
   )

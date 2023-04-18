@@ -1,15 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./Cabecalho.module.css";
 import { Link } from "react-router-dom";
+import DogsSvg from "../Componentes/DogsSvg";
 
-const Cabecalho: React.FC = () => {
+const Cabecalho: FC = () => {
   return (
-    <div className={styles.cabecalho}>
-      <nav className="container">
-        <Link to='/'>Home</Link>
-        <Link to='/login'>Login / Criar</Link>
+    <header className={styles.cabecalho}>
+      <nav className={`${styles.menu} container`}>
+        <Link className={styles.logo} to='/' aria-label='Dogs - Home'>
+          <DogsSvg />
+        </Link>
+        <Link className={styles.login} to='/login'>
+          Login / Criar
+        </Link>
       </nav>
-    </div>
+    </header>
   );
 };
 

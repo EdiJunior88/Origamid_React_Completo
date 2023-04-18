@@ -3,6 +3,7 @@
 }
 
 body {
+  padding-top: 4rem;
   margin: 0;
   color: #333;
   --tipo-primario: Helvetica, Arial, sans-serif;
@@ -36,6 +37,10 @@ input {
   font-size: 1rem;
   font-family: var(--tipo-primario);
   color: #333;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
