@@ -1,35 +1,30 @@
-import React, { ChangeEvent, FC, FormEvent, useState } from "react";
+import React, { FC, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Input from "../Formularios/Input";
 import Botao from "../Formularios/Botao";
+import useForm from "../../Hooks/useForm";
 
 const LoginFormulario: FC = () => {
-  const [nomeUsuario, setNomeUsuario] = useState<string>("");
-  const [senha, setSenha] = useState<string>("");
-
-  const tratarNomeUsuario = (event: ChangeEvent<HTMLInputElement>) => {
-    setNomeUsuario(event.target.value);
-  };
-
-  const tratarSenha = (event: ChangeEvent<HTMLInputElement>) => {
-    setSenha(event.target.value);
-  };
+  const nomeUsuario = useForm("");
+  const senha = useForm("");
 
   const tratarEnvio = async (evento: FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
 
-    try {
-      const resposta = await axios.post(
-        "https://dogsapi.origamid.dev/json/jwt-auth/v1/token",
-        {
-          nomeUsuario,
-          senha,
-        }
-      );
-      console.log(resposta);
-    } catch (erro) {
-      console.log(erro);
+    if (nomeUsuario.validacao() && senha.validacao()) {
+      try {
+        const resposta = await axios.post(
+          "https://dogsapi.origamid.dev/json/jwt-auth/v1/token",
+          {
+            username: nomeUsuario.value,
+            password: senha.value,
+          }
+        );
+        console.log(resposta);
+      } catch (erro) {
+        console.log(erro);
+      }
     }
   };
 
@@ -37,8 +32,13 @@ const LoginFormulario: FC = () => {
     <section>
       <h1>Login</h1>
       <form onSubmit={tratarEnvio}>
-        <Input label='Usuário' type='text' name='nomeUsuario' />
-        <Input label='Senha' type='password' name='senha' />
+        <Input
+          label='Usuário'
+          type='text'
+          name='nomeUsuario'
+          {...nomeUsuario}
+        />
+        <Input label='Senha' type='password' name='senha' {...senha} />
         <Botao disabled={false}>Entrar</Botao>
       </form>
       <Link to='/login/criar'>Cadastro</Link>
