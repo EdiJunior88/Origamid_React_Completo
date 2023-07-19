@@ -4,17 +4,20 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
+import UseStorage from "./UserContext.jsx";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login/*' element={<Login />} />
-        </Routes>
-        <Footer />
+        <UseStorage>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login/*' element={<Login />} />
+          </Routes>
+          <Footer />
+        </UseStorage>
       </BrowserRouter>
     </div>
   );
