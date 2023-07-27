@@ -1,9 +1,20 @@
-import React from 'react'
+import UserHeader from "./UserHeader";
+import { Routes, Route } from "react-router-dom";
+import Feed from "../Feed/Feed";
+import UserPhotoPost from "./UserPhotoPost";
+import UserStats from "./UserStats";
 
-const Usuário = () => {
+const User = () => {
   return (
-    <div>Usuário</div>
-  )
-}
+    <section className='container'>
+      <UserHeader />
+      <Routes>
+        <Route path='/' element={<Feed />} />
+        <Route path='postar' element={<UserPhotoPost />} />
+        <Route path='estatisticas' element={<UserStats />} />
+      </Routes>
+    </section>
+  );
+};
 
-export default Usuário
+export default User;

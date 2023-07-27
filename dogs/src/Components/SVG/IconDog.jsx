@@ -1,4 +1,4 @@
-const Dogs = () => {
+const IconDog = () => {
   return (
     <svg
       width='28'
@@ -17,4 +17,4 @@ const Dogs = () => {
   );
 };
 
-export default Dogs;
+export default IconDog;
