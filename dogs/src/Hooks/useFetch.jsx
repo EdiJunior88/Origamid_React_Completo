@@ -1,11 +1,11 @@
-import { useCallback, useState } from "react";
+import React from 'react';
 
 const useFetch = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = React.useState(null);
+  const [error, setError] = React.useState(null);
+  const [loading, setLoading] = React.useState(false);
 
-  const request = useCallback(async (url, options) => {
+  const request = React.useCallback(async (url, options) => {
     let response;
     let json;
     try {

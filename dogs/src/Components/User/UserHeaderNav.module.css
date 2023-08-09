@@ -43,7 +43,7 @@
   border-radius: 0.2rem;
   height: 40px;
   width: 40px;
-  padding: 0;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,12 +53,12 @@
 }
 
 .mobileButton::after {
-  content: "";
+  content: '';
   display: block;
   width: 1.2rem;
   height: 2px;
-  background: currentColor;
   border-radius: 2px;
+  background: currentColor;
   box-shadow: 0 6px currentColor, 0 -6px currentColor;
   transition: 0.2s;
 }
@@ -67,8 +67,8 @@
 .mobileButton:hover,
 .mobileButtonActive {
   outline: none;
-  background: none;
-  box-shadow: 0 0 3px #fea;
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
   border-color: #fb1;
   color: #fb1;
 }
@@ -94,6 +94,14 @@
   pointer-events: none;
 }
 
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
 .navMobile a,
 .navMobile button {
   display: flex;
@@ -104,14 +112,6 @@
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
   cursor: pointer;
-}
-
-.navMobileActive {
-  transition: 0.3s;
-  transform: initial;
-  opacity: 1;
-  pointer-events: initial;
-  z-index: 100;
 }
 
 .navMobile a:hover svg > *,

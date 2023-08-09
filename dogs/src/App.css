@@ -9,7 +9,7 @@ body {
   margin: 0px;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
-  --type-second: "Spectral", georgia;
+  --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
 }
 
@@ -53,7 +53,7 @@ a {
 }
 
 .mainContainer {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .title {
@@ -66,7 +66,7 @@ a {
 }
 
 .title::after {
-  content: "";
+  content: '';
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -74,14 +74,14 @@ a {
   position: absolute;
   bottom: 5px;
   left: -5px;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   z-index: -1;
 }
 
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
-  animation: animeLeft .3s forwards;
+  animation: animeLeft 0.3s forwards;
 }
 
 @keyframes animeLeft {
@@ -89,4 +89,18 @@ a {
     opacity: 1;
     transform: initial;
   }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
+
+.VictoryContainer {
+  height: initial !important;
 }

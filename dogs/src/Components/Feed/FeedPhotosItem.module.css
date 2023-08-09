@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.photo img {
+.photo > div {
   grid-area: 1/1;
 }
 
@@ -35,10 +35,10 @@
 .visualizacao::before {
   width: 16px;
   height: 10px;
-  content: "";
+  content: '';
   display: inline-block;
   margin-right: 0.25rem;
-  background: url("../../Assets/visualizacao.svg") no-repeat;
+  background: url('../../Assets/visualizacao.svg') no-repeat;
 }
 
 .photo:hover .visualizacao {
