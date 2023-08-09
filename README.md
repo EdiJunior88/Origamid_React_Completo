@@ -7,6 +7,10 @@
 
 <hr>
 
+<strong>Site do Projeto:</strong> <a href="https://dogsorigamid-edijunior88.netlify.app/">https://dogsorigamid-edijunior88.netlify.app/</a>
+
+<hr>
+
 <strong>Acesso aos slides em:</strong> <a href="https://www.origamid.com/slide/react-completo/">https://www.origamid.com/slide/react-completo/</a>
 
 <hr>
@@ -179,4 +183,4 @@
 <hr>
 
 <h4><b>Aulas:</b> :vhs: 108 video-aulas (Total de 18hrs)</h4>
-<h4><b>Status do Curso:</b> :speech_balloon: Estudando</h4>
+<h4><b>Status do projeto:</b> ✅ Concluído</h4>
