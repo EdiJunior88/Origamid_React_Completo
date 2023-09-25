@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './UserStatsGraphs.module.css';
-import { VictoryPie, VictoryChart, VictoryBar } from 'victory';
+import { useEffect, useState } from "react";
+import styles from "./UserStatsGraphs.module.css";
+import { VictoryPie, VictoryChart, VictoryBar } from "victory";
 
 const UserStatsGraphs = ({ data }) => {
-  const [graph, setGraph] = React.useState([]);
-  const [total, setTotal] = React.useState(0);
+  const [graph, setGraph] = useState([]);
+  const [total, setTotal] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const graphData = data.map((item) => {
       return {
         x: item.title,
@@ -15,7 +15,7 @@ const UserStatsGraphs = ({ data }) => {
     });
 
     setTotal(
-      data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b, 0),
+      data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b, 0)
     );
     setGraph(graphData);
   }, [data]);
@@ -33,19 +33,19 @@ const UserStatsGraphs = ({ data }) => {
           style={{
             data: {
               fillOpacity: 0.9,
-              stroke: '#fff',
+              stroke: "#fff",
               strokeWidth: 2,
             },
             labels: {
               fontSize: 14,
-              fill: '#333',
+              fill: "#333",
             },
           }}
         />
       </div>
       <div className={styles.graphItem}>
         <VictoryChart>
-          <VictoryBar alignment="start" data={graph}></VictoryBar>
+          <VictoryBar alignment='start' data={graph}></VictoryBar>
         </VictoryChart>
       </div>
     </section>

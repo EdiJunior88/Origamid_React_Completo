@@ -1,15 +1,15 @@
-import React from 'react';
-import FeedPhotosItem from './FeedPhotosItem';
-import useFetch from '../../Hooks/useFetch';
-import { PHOTOS_GET } from '../../Api';
-import Error from '../Helper/Error';
-import Loading from '../Helper/Loading';
-import styles from './FeedPhotos.module.css';
+import { useEffect } from "react";
+import FeedPhotosItem from "./FeedPhotosItem";
+import useFetch from "../../Hooks/useFetch";
+import { PHOTOS_GET } from "../../Api";
+import Error from "../Helper/Error";
+import Loading from "../Helper/Loading";
+import styles from "./FeedPhotos.module.css";
 
 const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
 
-  React.useEffect(() => {
+  useEffect(() => {
     async function fetchPhotos() {
       const total = 6;
       const { url, options } = PHOTOS_GET({ page, total, user });
