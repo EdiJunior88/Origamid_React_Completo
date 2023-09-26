@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect } from "react";
 import Head from "../Helper/Head";
 import useFetch from "../../Hooks/useFetch";
-import { STATS_GET } from "../../Api";
+import { STATS_GET } from "../../api";
 import Loading from "../Helper/Loading";
 import Error from "../Helper/Error";
 const UserStatsGraphs = lazy(() => import("./UserStatsGraphs"));
