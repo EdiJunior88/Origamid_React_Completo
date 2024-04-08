@@ -14,7 +14,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "victory": "^37.0.1",
+    "victory": "^37.0.2",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svgr": "^4.2.0"
   },
