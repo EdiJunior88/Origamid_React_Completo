@@ -7,7 +7,7 @@
 
 <hr>
 
-<strong>Site do Projeto:</strong> <a href="https://dogsorigamid-edijunior88.netlify.app/">https://dogsorigamid-edijunior88.netlify.app/</a>
+<strong>Site do Projeto:</strong> <a href="https://origamid-react-completo.onrender.com/">https://origamid-react-completo.onrender.com/</a>
 
 <hr>
 
