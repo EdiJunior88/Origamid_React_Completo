@@ -3,11 +3,11 @@
 ## Tech Stack
 EdiJunior88/Origamid_React_Completo is built on the following main stack:
 
-- [React](https://reactjs.org/) – Javascript UI Libraries
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [ESLint](http://eslint.org/) – Code Review
+- [React](https://reactjs.org/) – Javascript UI Libraries
 - [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - [Victory](http://formidable.com/open-source/victory/) – Charting Libraries
+- [ESLint](http://eslint.org/) – Code Review
 - [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
@@ -18,11 +18,11 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 EdiJunior88/Origamid_React_Completo is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - <img width='25' height='25' src='https://img.stackshare.io/service/6115/default_991927763182707c7c8d92503b25c7fa09c0de2a.png' alt='Victory'/> [Victory](http://formidable.com/open-source/victory/) – Charting Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
@@ -34,7 +34,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/Origamid_React_Completo](https://github.com/EdiJunior88/Origamid_React_Completo)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|17<br/>Tools used|02/04/24 <br/>Report generated|
+|17<br/>Tools used|05/02/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -74,7 +74,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://github.com/rackt/react-router">React Router</a></sub>
   <br>
-  <sub>v6.21.3</sub>
+  <sub>v6.23.0</sub>
 </td>
 
 <td align='center'>
@@ -132,14 +132,14 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[@types/react](https://www.npmjs.com/@types/react)|v18.2.48|01/15/24|dependabot[bot] |MIT|N/A|
-|[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.18|01/15/24|dependabot[bot] |MIT|N/A|
-|[eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)|v7.33.2|01/15/24|dependabot[bot] |MIT|N/A|
-|[eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks)|v4.6.0|01/15/24|dependabot[bot] |MIT|N/A|
-|[prop-types](https://www.npmjs.com/prop-types)|v15.8.1|01/15/24|dependabot[bot] |MIT|N/A|
-|[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|01/15/24|dependabot[bot] |MIT|N/A|
-|[react-router-dom](https://www.npmjs.com/react-router-dom)|v6.21.3|01/15/24|dependabot[bot] |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v5.0.12|01/19/24|dependabot[bot] |N/A|N/A|
+|[vite](https://www.npmjs.com/vite)|v5.2.0|04/26/24|EdiJunior88 |N/A|[CVE-2024-31207](https://github.com/advisories/GHSA-8jhw-289h-jh2g) (Moderate)|
+|[@types/react](https://www.npmjs.com/@types/react)|v18.2.66|04/26/24|EdiJunior88 |MIT|N/A|
+|[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.22|04/26/24|EdiJunior88 |MIT|N/A|
+|[eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)|v7.34.1|04/26/24|EdiJunior88 |MIT|N/A|
+|[eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks)|v4.6.0|04/26/24|EdiJunior88 |MIT|N/A|
+|[prop-types](https://www.npmjs.com/prop-types)|v15.8.1|04/26/24|EdiJunior88 |MIT|N/A|
+|[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|04/26/24|EdiJunior88 |MIT|N/A|
+|[react-router-dom](https://www.npmjs.com/react-router-dom)|v6.23.0|04/26/24|EdiJunior88 |MIT|N/A|
 
 <br/>
 <div align='center'>
